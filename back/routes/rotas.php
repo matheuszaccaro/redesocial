@@ -1,6 +1,9 @@
 <?php
 
-require_once __DIR__ . "/../controllers/ClienteController.php";
+require_once __DIR__ . "/../config.php";
+require_once __DIR__ . "/../controllers/UsuarioController.php";
+require_once __DIR__ . "/../controllers/PublicacaoController.php";
+require_once __DIR__ . "/../controllers/CurtidaController.php";
 
 $rota = $_GET["rota"] ?? "";
 $metodo = $_SERVER["REQUEST_METHOD"];
@@ -20,7 +23,7 @@ if ($rota === "usuario"){
             deleteUsuario($con);
             break;
         default:
-            teste();
+            testeUsuario();
     }
 }elseif ($rota === "publicacao"){
     switch($metodo){
@@ -37,7 +40,7 @@ if ($rota === "usuario"){
             deletePublicacao($con);
             break;
         default:
-            teste();
+            testePublicacao();
     }
 }elseif ($rota === "curtida"){
     switch($metodo){
@@ -54,7 +57,7 @@ if ($rota === "usuario"){
             deleteCurtida($con);
             break;
         default:
-            teste();
+            testeCurtida();
     }
 }
 ?>

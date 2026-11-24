@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../models/PublicacaoModel.php";
 
-function teste(){
+function testePublicacao(){
     echo json_encode(["Mensagem" => "Back-end respondendo com sucesso!"]);
     exit;
 }

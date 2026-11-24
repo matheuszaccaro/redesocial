@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . "/../models/UsuarioModel.php";
+require_once __DIR__ . '/../models/UsuarioModel.php';
 
-function teste(){
+function testeUsuario(){
     echo json_encode(["Mensagem" => "Back-end respondendo com sucesso!"]);
     exit;
 }
@@ -67,4 +67,3 @@ function deleteUsuario($con){
     removerUsuario($con, $id);
     echo json_encode(["mensagem" => "Usuário removido com sucesso!"]);
 }
-?>
