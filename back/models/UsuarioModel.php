@@ -20,3 +20,4 @@ function removerUsuario($con, $id){
     $stmt -> execute([$id]);
 }
 }
+?>

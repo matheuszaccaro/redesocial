@@ -6,6 +6,7 @@ function teste(){
     echo json_encode(["Mensagem" => "Back-end respondendo com sucesso!"]);
     exit;
 }
+//receber e validar os dados
 function receberDadosUsuario(){
     $dados = json_decode(file_get_contents("php://input"), true);
 
@@ -66,3 +67,4 @@ function deleteUsuario($con){
     removerUsuario($con, $id);
     echo json_encode(["mensagem" => "Usuário removido com sucesso!"]);
 }
+?>
